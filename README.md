@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: check-ecr-image
-        uses: mnmandahalf/check-ecr-image-exists@v0.1.5
+        uses: gft-blx/check-ecr-image-exists@v1.0.0
         with:
           region: us-east-1
           repository-name: "my-repository/name"
@@ -28,7 +28,7 @@ jobs:
         if: ${{ steps.check-ecr-image.outputs.image-exists == '0' }}
 ```
 
-see [action.yml](https://github.com/mnmandahalf/github-actions-ecr-image-exists/blob/main/action.yml)
+see [action.yml](./action.yml)
 
 ## inputs
 
